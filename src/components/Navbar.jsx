@@ -1,7 +1,7 @@
 const navItems = [
   { label: 'Home', href: '#top' },
   { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Resume', href: '#resume' },
   { label: 'Contacts', href: '#contact' },
 ]
 
@@ -10,7 +10,7 @@ function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 bg-[#0c1a22]/88 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a href="#top" className="text-sm font-black text-white">
-          Phoebe
+          Phoebe Claire
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -26,7 +26,7 @@ function Navbar() {
         </div>
 
         <a
-          href="mailto:hello@example.com"
+          href="mailto:phoebeclairelanquino@gmail.com"
           className="rounded-sm border border-[#ff745f] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#ff745f]"
         >
           Hire me

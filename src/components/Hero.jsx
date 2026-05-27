@@ -1,4 +1,4 @@
-const tools = ['HTML5', 'CSS', 'JavaScript', 'Django', 'React', 'Git', 'GitHub']
+const tools = ['Web Development', 'Systems Analysis', 'FRD/BRD', 'QA Testing', 'Django', 'React', 'Git']
 
 function Hero() {
   return (
@@ -13,10 +13,10 @@ function Hero() {
             <p className="text-2xl text-white">I'm Phoebe</p>
           </div>
           <h1 className="mt-5 max-w-xl text-4xl font-black leading-tight sm:text-5xl">
-            Full-Stack Developer
+            Web Developer & Systems Analyst
           </h1>
           <p className="mt-5 max-w-lg text-sm leading-7 text-slate-300">
-            I build clean, responsive interfaces and reliable backend systems using React, Django, DRF, and JavaScript.
+            I build and support internal systems, gather requirements, prepare FRD and BRD documents, test workflows, and develop web solutions with Django, React, and JavaScript.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

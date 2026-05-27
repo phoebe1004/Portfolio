@@ -3,41 +3,36 @@ import Navbar from './components/Navbar'
 
 const services = [
   {
-    title: 'Website Development',
-    detail: 'Clean responsive pages, reusable components, and polished frontend flows.',
+    title: 'Systems Development',
+    detail: 'Building and maintaining in-house systems, fixing bugs, and improving workflows for real users.',
   },
   {
-    title: 'API Development',
-    detail: 'Django and DRF backends with authentication, permissions, and practical data models.',
+    title: 'Requirements & Documentation',
+    detail: 'Gathering data and preparing functional and business requirement documents such as FRD and BRD.',
   },
   {
-    title: 'Deployment Support',
-    detail: 'Preparing projects to run smoothly beyond the local machine.',
+    title: 'QA & Web Support',
+    detail: 'Testing system behavior, checking issues, supporting website updates, email tasks, and social posting.',
   },
 ]
 
-const projects = [
+const resumeItems = [
   {
-    title: 'DevDash Analytics',
-    description: 'A responsive analytics workspace with live metrics, role-based views, and fast filtering for product teams.',
-    stack: ['React', 'Django REST', 'PostgreSQL'],
+    title: 'Southern Philippines Medical Center',
+    description: 'Works on in-house systems, data gathering, FRD and BRD documentation, bug fixing, and occasional QA support.',
+    stack: ['Systems Development', 'Documentation', 'QA'],
   },
   {
-    title: 'TaskFlow API',
-    description: 'A REST API for project tracking, authentication, permissions, and reporting-ready data models.',
-    stack: ['Django', 'DRF', 'JWT'],
-  },
-  {
-    title: 'LaunchPad Site',
-    description: 'A landing experience with reusable sections, accessible interactions, and mobile-first layouts.',
-    stack: ['React', 'Tailwind', 'Vite'],
+    title: 'BCC Rail Ltd',
+    description: 'Supports the UK-based company through website building, email handling, course updates, group announcements, and social media posting.',
+    stack: ['Website Support', 'Admin Support', 'Social Media'],
   },
 ]
 
 const stats = [
-  { value: '120', suffix: '+', label: 'Completed projects' },
-  { value: '95', suffix: '%', label: 'Client satisfaction' },
-  { value: '10', suffix: '+', label: 'Years of experience' },
+  { value: '2023', suffix: '', label: 'College graduate' },
+  { value: '2', suffix: '+', label: 'Years professional experience' },
+  { value: '2026', suffix: '', label: 'CSE passer' },
 ]
 
 function App() {
@@ -60,9 +55,9 @@ function App() {
 
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff745f]">About me</p>
-            <h2 className="mt-3 text-4xl font-black sm:text-5xl">I enjoy building things for the web.</h2>
+            <h2 className="mt-3 text-4xl font-black sm:text-5xl">I work between development, documentation, and system support.</h2>
             <p className="mt-6 max-w-2xl text-sm leading-8 text-slate-300">
-              I started learning web development because I wanted to create useful software from scratch. Since then, I have been building full-stack projects, improving my UI taste, and learning how to make applications simpler for people to use.
+              I graduated from Assumption College of Davao in 2023 and started working at Southern Philippines Medical Center in August 2023. My experience includes system development, data gathering, FRD and BRD documentation, bug fixing, QA support, and website/admin work for BCC Rail Ltd.
             </p>
 
             <div className="mt-10 grid gap-5 sm:grid-cols-3">
@@ -80,23 +75,23 @@ function App() {
         </div>
       </section>
 
-      <section id="projects" className="bg-[#0a161d] py-24">
+      <section id="resume" className="bg-[#0a161d] py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff745f]">Projects</p>
-            <h2 className="mt-3 text-4xl font-black sm:text-5xl">Selected work</h2>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff745f]">Resume</p>
+            <h2 className="mt-3 text-4xl font-black sm:text-5xl">Experience highlights</h2>
           </div>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {projects.map((project) => (
-              <article key={project.title} className="rounded-sm border border-white/8 bg-[#101f28] p-6 transition hover:-translate-y-1 hover:border-[#ff745f]/50">
+            {resumeItems.map((item) => (
+              <article key={item.title} className="rounded-sm border border-white/8 bg-[#101f28] p-6 transition hover:-translate-y-1 hover:border-[#ff745f]/50">
                 <div className="mb-6 h-36 rounded-sm bg-[linear-gradient(135deg,rgba(255,116,95,0.85),rgba(24,49,60,0.9))]" />
-                <h3 className="text-xl font-black">{project.title}</h3>
-                <p className="mt-4 min-h-24 text-sm leading-7 text-slate-400">{project.description}</p>
+                <h3 className="text-xl font-black">{item.title}</h3>
+                <p className="mt-4 min-h-24 text-sm leading-7 text-slate-400">{item.description}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {project.stack.map((item) => (
-                    <span key={item} className="rounded-sm border border-white/10 px-3 py-2 text-xs font-bold text-slate-300">
-                      {item}
+                  {item.stack.map((tag) => (
+                    <span key={tag} className="rounded-sm border border-white/10 px-3 py-2 text-xs font-bold text-slate-300">
+                      {tag}
                     </span>
                   ))}
                 </div>
@@ -109,18 +104,24 @@ function App() {
       <section id="contact" className="bg-[#0c1a22] py-24">
         <div className="mx-auto max-w-3xl px-5 text-center sm:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff745f]">Contacts</p>
-          <h2 className="mt-3 text-4xl font-black sm:text-5xl">Got a project?</h2>
+          <h2 className="mt-3 text-4xl font-black sm:text-5xl">Interested in working together?</h2>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-8 text-slate-300">
-            I am open to frontend, backend, and full-stack projects where thoughtful engineering and a clean user experience matter.
+            I am open to web developer, systems analyst, QA support, and full-stack development opportunities where practical problem-solving matters.
           </p>
+          <a
+            href="mailto:phoebeclairelanquino@gmail.com"
+            className="mt-5 inline-block text-sm font-semibold text-[#ff8a78] transition hover:text-white"
+          >
+            phoebeclairelanquino@gmail.com
+          </a>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="mailto:hello@example.com" className="rounded-sm bg-[#ff745f] px-5 py-3 text-sm font-black text-white transition hover:bg-[#ff8a78]">
+            <a href="mailto:phoebeclairelanquino@gmail.com" className="rounded-sm bg-[#ff745f] px-5 py-3 text-sm font-black text-white transition hover:bg-[#ff8a78]">
               Email me
             </a>
-            <a href="https://github.com/" className="rounded-sm border border-white/20 px-5 py-3 text-sm font-black text-white transition hover:border-[#ff745f] hover:text-[#ff8a78]">
+            <a href="https://github.com/phoebe1004" className="rounded-sm border border-white/20 px-5 py-3 text-sm font-black text-white transition hover:border-[#ff745f] hover:text-[#ff8a78]">
               GitHub
             </a>
-            <a href="https://linkedin.com/" className="rounded-sm border border-white/20 px-5 py-3 text-sm font-black text-white transition hover:border-[#ff745f] hover:text-[#ff8a78]">
+            <a href="https://www.linkedin.com/in/phoebe-claire-lanquino-6ba876144" className="rounded-sm border border-white/20 px-5 py-3 text-sm font-black text-white transition hover:border-[#ff745f] hover:text-[#ff8a78]">
               LinkedIn
             </a>
           </div>
