@@ -16,3 +16,139 @@ body {
   background: #ff745f;
   color: #ffffff;
 }
+
+/* Animated gradient outlines used on cards and skill chips.
+   The mask keeps the gradient on the border only, never inside the element. */
+.gradient-outline-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.gradient-outline-chip {
+  position: relative;
+  isolation: isolate;
+}
+
+.gradient-outline-card::before,
+.gradient-outline-chip::before {
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  content: "";
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.gradient-outline-card::before,
+.gradient-outline-chip::before {
+  border-radius: 2px;
+  padding: 1px;
+  background: linear-gradient(90deg, #ff745f, #ffb199, #c94d5d, #ff745f);
+  background-size: 300% 100%;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.gradient-outline-card:hover::before,
+.gradient-outline-chip:hover::before {
+  opacity: 1;
+  animation: outline-gradient-drift 2.4s linear infinite;
+}
+
+@keyframes outline-gradient-drift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+/* Decorative preview animations for the abstract project thumbnails.
+   These create motion without exposing any real internal system screenshots. */
+.preview-float {
+  animation: preview-float 3.4s ease-in-out infinite;
+}
+
+.preview-card {
+  animation: preview-float 3.6s ease-in-out infinite;
+}
+
+.preview-row {
+  animation: preview-row 2.8s ease-in-out infinite;
+}
+
+.preview-pulse {
+  animation: preview-pulse 2.2s ease-in-out infinite;
+}
+
+.preview-browser {
+  animation: preview-browser 4s ease-in-out infinite;
+}
+
+.preview-tile {
+  animation: preview-tile 3s ease-in-out infinite;
+}
+
+@keyframes preview-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes preview-row {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scaleX(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(0.94);
+  }
+}
+
+@keyframes preview-pulse {
+  0%,
+  100% {
+    opacity: 0.75;
+    box-shadow: none;
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 18px rgba(255, 116, 95, 0.38);
+  }
+}
+
+@keyframes preview-browser {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes preview-tile {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

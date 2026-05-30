@@ -1,4 +1,5 @@
 const navItems = [
+  // These IDs match the section IDs used across the page.
   { label: 'Home', href: '#top' },
   { label: 'About', href: '#about' },
   { label: 'Resume', href: '#resume' },
