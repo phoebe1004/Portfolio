@@ -45,7 +45,7 @@ export const resumeItems = [
     preview: 'website',
     title: 'BCC Rail Ltd',
     description: 'Supports the UK-based company through website development, email handling, course updates, group announcements, and social media posting.',
-    stack: ['Website Management', 'Admin Support', 'Social Media Support'],
+    stack: ['Website Management', 'Next.js', 'WordPress', 'Admin Support', 'Social Media Support'],
     link: 'https://bccrail.co.uk/',
   },
 ]

@@ -1,6 +1,6 @@
 import phoebePhoto from '../assets/phoebe-cutout-final.png'
 
-const tools = ['Django', 'Python REST APIs', 'JavaScript', 'Systems Analysis', 'FRD/BRD', 'QA Testing', 'Git']
+const tools = ['Django', 'Figma', 'Python REST APIs', 'JavaScript', 'Laravel', 'PHP', 'React JS', 'Next.js', 'QA Testing', 'Technical Documentation' ]
 
 function Hero() {
   return (
