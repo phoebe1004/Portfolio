@@ -13,8 +13,9 @@ dist
 dist-ssr
 *.local
 
-# Personal images
+# Personal images — ignore unused ones, but keep the one the site uses
 src/assets/
+!src/assets/phoebe-cutout-final.png
 
 # Editor directories and files
 .vscode/*
