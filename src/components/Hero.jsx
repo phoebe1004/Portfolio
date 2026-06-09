@@ -11,7 +11,7 @@ function Hero() {
           <p className="text-3xl font-black">
             Hello<span className="text-[#ff745f]">.</span>
           </p>
-          <div className="mt-6 flex items-center gap-5">
+          <div className="mt-6 flex items-center gap-5">  
             <span className="h-px w-24 bg-[#ff745f]" />
             <p className="text-2xl text-white">I'm Phoebe</p>
           </div>
